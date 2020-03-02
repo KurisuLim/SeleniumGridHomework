@@ -15,3 +15,18 @@
 #### JAVA AUTOMATION A4  Homework - Set up Selenium grid locally
 1. Set up Selenium grid locally
 2. Run your tests through Selenium Grid, not through the driver directly.
+
+### Running Grid Locally
+```bash
+http://localhost:4444/grid/console/
+````
+
+### Command to run the Hub
+```bash
+java -jar selenium-server-standalone-3.141.59.jar -role hub
+````
+
+### Command to run the Node
+```bash
+java -jar selenium-server-standalone-3.141.59.jar -role node -hub http://localhost:4444/grid/register/ -port 5556 -browser browserName=chrome,maxInstances=2,platform=MAC -browser browserName=firefox,maxInstances=2,platform=MAC -browser browserName=safari,maxInstances=1,platform=MAC
+````
