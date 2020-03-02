@@ -28,6 +28,6 @@ public class LoginTest extends BaseTest {
     @Test
     public void validLogin(){
         page.loginUser("tomsmith","SuperSecretPassword!");
-        Assert.assertTrue(page.isErrorAlertShow());
+        Assert.assertTrue(page.isSuccessAlertShow());
     }
 }
