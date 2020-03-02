@@ -1,0 +1,24 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
+    <parameter name="environment" value="local"></parameter>
+    <!-- <parameter name="environment" value="grid"></parameter> -->
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="http://the-internet.herokuapp.com/login"/>
+    <parameter name="nodeURL" value="http://localhost:4444/wd/hub"/>
+    <test name="Chrome">
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="http://the-internet.herokuapp.com/login"/>
+    <parameter name="nodeURL" value="http://localhost:4444/wd/hub"/>
+    <test name="Firefox">
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+
+</suite>
